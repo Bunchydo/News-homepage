@@ -1,0 +1,78 @@
+                        Timeline plan for News homepage project
+
+        Structure for News Homepage project: (Day 1-Feb 19 2025)
+1. Develop main container to hold the sub-containers for easier styling ✔
+2. Create two separate containers, one for the nav bar and one for the grid items ✔
+3. Add general styles like font family and color to things added so far
+4. Create grid with 3 columns and 3 rows ✔
+
+        Structure for News Homepage project: (Day 1-Feb 20 2025)
+1. Put grid items in correct spaces
+2. add correct font
+3. Nav bar layout 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Stuff learnt
+Why Use auto to Adjust Row Size Automatically?
+Using grid-template-rows: auto; allows each row to adjust based on its content instead of forcing equal heights (1fr). This prevents layout issues when some content is taller than others.
+
+Use background image to span columns in grid layouts
+
+the column width might be even but the items in th column dont have to be the same width
+look carefully to see if you used id or class tags in css.
+if trying to center a container inside of the body, dont make it the same width as the body. it has to be smaller
+when screen gets smaller on smaller devices make container for information take up more space to account for shrinking screen.as the screen gets smaller, you often want the content container to take up more width to maintain readability. 📱➡️💻Yes, you can use the clamp() function to set the width of your container effectively! However, there's a slight adjustment needed for the clamp() function syntax. The correct format should have a minimum value, a preferred value, and a maximum value, and it's better to use px or rem units for fixed dimensions in the clamp() function.
+when you are trying to change size of container and its not changing and an image is in it. it could be the image is too big and causing the container not to change
+If you want the images to be responsive (shrink when needed but not grow past a certain size), you should use a combination of max-width, width: 100%, and height: auto.
+Yes, exactly! 🎯 Instead of relying on ::after, you can add an empty <span> inside your .nav-class and then style it using CSS.
+
+✅ Why Use a <span> Instead of ::after?
+More control – You can modify it with JavaScript if needed.
+Easier styling – You can apply ids, classes, animations, etc.
+Better accessibility – ::after content might not be properly recognized by screen readers.
+✅ How to Do It
+🔹 HTML:
+
+html
+Copy
+Edit
+<div class="nav-class">
+    Menu
+    <span id="menu-icon"></span>
+</div>
+🔹 CSS:
+
+css
+Copy
+Edit
+#menu-icon {
+    background-image: url("assets/images/icon-menu.svg");
+    display: inline-block;
+    width: 24px;  /* Set appropriate width */
+    height: 24px; /* Set appropriate height */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+🔥 When to Use ::after Instead?
+If the icon is purely decorative and doesn’t need interaction.
+If you don’t need to manipulate it with JavaScript.
+Would this approach work for your case? 😊
+
+
+
+
+
